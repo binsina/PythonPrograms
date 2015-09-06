@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package orderchecker;
 
 import java.util.Vector;
@@ -21,16 +18,18 @@ public class Orderchecker {
        
        
 
+       //ask user for for Password to gain access to change the Price
        
-       JFrame frame = new JFrame("Per Scholas  E.Hernandez:Programming Class");
+        JFrame frame = new JFrame("Per Scholas  E.Hernandez:Programming Class");
 	    //Jframe controls the banner of the out screen
 	    int codeinput = Integer.parseInt(JOptionPane.showInputDialog(
 	            frame, 
-	            "Enter the Password to Change the Prices (Hint: its 1234)", 
+	            "Enter the Password to Change the Prices (Hint: its 123)", 
 	            "Per Scholas E.Hernandez:Programming Class", 
 	            JOptionPane.QUESTION_MESSAGE));
-	    
-            if (codeinput==1234) {
+	    //if access is granted, then following code takes over
+            
+            if (codeinput==123) {
                    int boltcp=3,nutscp=2,washercp=5;
                 JOptionPane.showMessageDialog(frame,"The Current Prices for the products are:"+"Bolts:"+"$" +
                         boltcp+" "+ "Nuts is:"+" "+"$"+nutscp +" " + "Washers is:"+"$"+washercp ,"Current Prices",JOptionPane.ERROR_MESSAGE);
@@ -74,9 +73,9 @@ int Totalbolts=(bolts*boltprice);
             
         
 
-        //JFrame frame = new JFrame("Per Scholas  E.Hernandez:Programming Class");
+        //if codeinput is not entered correctly, then the following code asks for qty and calculates the total price
         
-        if (codeinput !=1234) {
+        if (codeinput !=123) {
                 
                 bolts = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Amount of "
                         + "bolts you want: "));  
