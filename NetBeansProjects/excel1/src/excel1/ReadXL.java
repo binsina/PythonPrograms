@@ -20,16 +20,15 @@ public class ReadXL {
     public static String fileToBeRead="/Users/binsina/Desktop/Read.xls";
     public static void main(String argv[]) throws Exception{       
         
-				// Create a work book reference
-				HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(fileToBeRead));
-				// Refer to the sheet. Put the Name of the sheet to be referred from
-				// Alternative you can also refer the sheet by index using getSheetAt(int index)
-				HSSFSheet sheet = workbook.getSheet("Perscholas");
-				//Reading the TOP LEFT CELL
-				HSSFRow row = sheet.getRow(1);
-				// Create a cell ate index zero ( Top Left)
-				HSSFCell cell = row.getCell((short)0);
-				// Type the content
+	// Create a work book reference
+	HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(fileToBeRead));
+	// Refer to the sheet. Put the Name of the sheet to be referred from
+	// Alternative you can also refer the sheet by index using getSheetAt(int index)
+     HSSFSheet sheet = workbook.getSheet("Perscholas");
+	HSSFRow row = sheet.getRow(1);
+	// Create a cell ate index zero ( Top Left)
+	HSSFCell cell = row.getCell((short)0);
+	// Type the content
 				            
             
        JFrame frame = new JFrame("Per Scholas  E.Hernandez:Programming Class");
@@ -41,9 +40,10 @@ public class ReadXL {
 	            JOptionPane.QUESTION_MESSAGE));
 	    //if access is granted, then following code takes over
             if (codeinput==1234) {
-        int boltprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Value you want to add to the price of the Bolts : "));
-        int nutprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Value you want to add to the price of the Nuts : "));
-        int washerprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Value you want to add to the price of the Washers : "));
+                
+        int boltprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Amount you want to add to the price of the Bolts : "));
+        int nutprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Amount you want to add to the price of the Nuts : "));
+        int washerprice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the Amount you want to add to the price of the Washers : "));
 //Read the spreadsheet that needs to be updated
         
         
@@ -73,7 +73,10 @@ public class ReadXL {
         my_xls_workbook.write(output_file);
         //close the stream
         output_file.close();
-    JOptionPane.showInputDialog(null,"THE TOP RIGHT CELL is:" +" " + cell.getNumericCellValue());
+    
+    
+           JOptionPane.showInputDialog(null,"Price Update Checker: the boltprice was changed to:" +"$ " + cell.getNumericCellValue());  
+    
     int bolts = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the AMOUNT of "
                    + "bolts you want: "));  
       
