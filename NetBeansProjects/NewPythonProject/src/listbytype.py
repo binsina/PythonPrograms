@@ -18,7 +18,7 @@ Listnumbers = list(map(lambda x:(x[2],x[4],x[5]),List))
 #using lambda/map tool to separate the list by numbers/and add the integars
 print (Listnumbers)
 print(" ")
-print (fName,lName,"Your Total expensives this year is:",Listnumaddition)        
-      
+#used the %s to make the output little more cleaner       
+print("First Name: %s\nLast Name: %s\nYour Total expensives this Year Were:%s" % (fName,lName,Listnumaddition))      
 
 
