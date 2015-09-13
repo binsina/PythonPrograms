@@ -1,6 +1,6 @@
 fName=str(raw_input("what is your firt name?"))
 lName=str(raw_input("what is your last name?"))
-transCost=int(raw_input("How do you do pay for transportation this year?"))
+transCost=int(raw_input("How much did you do pay for transportation this year?"))
 College=str(raw_input("What is the name of your college or school you attend ?"))
 Graduation=input("How much do you pay for tution this year ?")
 InsurancePay=input("How much do you pay for insurance deductible per year ?")
@@ -19,6 +19,6 @@ Listnumbers = list(map(lambda x:(x[2],x[4],x[5]),List))
 print (Listnumbers)
 print(" ")
 #used the %s to make the output little more cleaner       
-print("First Name: %s\nLast Name: %s\nYour Total expensives this Year Were:%s" % (fName,lName,Listnumaddition))      
+print("%s %s Your Total expensives this Year were:$%s" %(fName,lName,Listnumaddition))    
 
 
